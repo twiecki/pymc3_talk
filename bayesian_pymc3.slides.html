@@ -1,8 +1,30 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>[]</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/reveal.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/theme/simple.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/html5shiv.js"></script>
+<![endif]-->
+
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
@@ -1651,48 +1673,66 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-body {
-  overflow: visible;
-  padding: 8px;
+.reveal {
+font-size: 20px;
+overflow-y: auto;
+overflow-x: hidden;
 }
-.input_area {
-  padding: 0.2em;
+.reveal pre {
+width: 95%;
+padding: 0.4em;
+margin: 0px;
+font-family: monospace, sans-serif;
+font-size: 80%;
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
-
-pre {
-    padding: 0.2em;
-    border: none;
-    margin: 0px;
-    font-size: 13px;
+.reveal section img {
+border: 0px solid black;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+.reveal .slides {
+text-align: left;
+}
+.reveal.fade {
+opacity: 1;
+}
+div.input_area {
+padding: 0.06em;
+}
+div.code_cell {
+background-color: transparent;
+}
+div.prompt {
+width: 11ex;
+padding: 0.4em;
+margin: 0px;
+font-family: monospace, sans-serif;
+font-size: 80%;
+text-align: right;
+}
+div.output_area pre {
+font-family: monospace, sans-serif;
+font-size: 80%;
+}
+div.output_prompt {
+    /* 5px right shift to account for margin in parent container */
+    margin: 5px 5px 0 0;
+}
+.rendered_html p {
+text-align: inherit;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
 </head>
-<body>
 
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <center><h1>
 Bayesian data analysis with PyMC3
@@ -1710,7 +1750,7 @@ Quantopian Inc.
 
 
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="about-me">About me</h1>
 <ul>
@@ -3007,10 +3047,13 @@ jrg5LxUAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="why-should-you-care-about-bayesian-data-analysis">Why should you care about Bayesian Data Analysis?</h1>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -3035,6 +3078,7 @@ In&nbsp;[4]:
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -4344,7 +4388,7 @@ CMhiAAAAAAAABGQxAAAAAAAAArIYAAAAAAAAAVkMAAAAAACAgCwGAAAAAABAQBYDAAAAAAAghPgP
 <ul>
 <li>Blackbox models not good at conveying <strong>what</strong> they have learned.</li>
 </ul>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -6142,7 +6186,7 @@ YII=
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="probabilistic-programming">Probabilistic Programming</h1>
 <ul>
@@ -6150,7 +6194,9 @@ YII=
 <li>Write a <strong>programmatic story</strong> of how <strong>unknown causes</strong> result in <strong>observable data</strong>.</li>
 <li>Use <strong>Bayes formula</strong> to invert generative model to infer <strong>unknown causes</strong>.</li>
 </ul>
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="random-variables-described-by-probability-distributions">Random variables described by probability distributions</h1>
 <ul>
@@ -6158,7 +6204,7 @@ YII=
 <li>Probability distribution assigns a probability to each possible state.</li>
 <li><strong>Not</strong> a single number (e.g. most likely state).</li>
 </ul>
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="coin-tossing-experiment.">Coin-tossing experiment.</h1>
 <ul>
@@ -6174,7 +6220,7 @@ YII=
 <li>Clearly something is missing!</li>
 <li><strong>Quantification of uncertainty.</strong></li>
 </ul>
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Moreover...</p>
 <ul>
@@ -6185,7 +6231,8 @@ YII=
 <li>Again, this doesn't seem right.</li>
 <li>Incorporate <strong>prior knowledge.</strong></li>
 </ul>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -6201,9 +6248,11 @@ In&nbsp;[2]:
 </div>
 
 </div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="textexpress-probability-of-heads-as-random-variable-theta"><span class="math">\[ \text{Express probability of heads as random variable } \theta\]</span></h2>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -6640,6 +6689,7 @@ jIkAERHRIsZEgIiIaBFjIkBERLSIMREgIiJaxJgIEBERLWL/D3wxXljeLuMRAAAAAElFTkSuQmCC
 </div>
 
 </div>
+    </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -7085,7 +7135,8 @@ keGwACIiIiLDYQFEREREhsMCiIiIiAyHBRAREREZzv8DyNlNv72bmi8AAAAASUVORK5CYII=
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span class="math">\[ \theta \sim \text{Beta}(2, 2) \]</span> <span class="math">\[ P(\theta) = \text{Beta}(2, 2) \]</span></p>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -7531,6 +7582,7 @@ xlgIEBERLWP/D7YkUBDmWbG+AAAAAElFTkSuQmCC
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -7985,7 +8037,8 @@ r40AAAAASUVORK5CYII=
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span class="math">\[ P(\theta | h=1) = \text{Beta}(3, 2) \]</span></p>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -8407,6 +8460,7 @@ UsNoIEAIIYTUMBoIEEIIITWMBgKEEEJIDfs/lxmufN1xusUAAAAASUVORK5CYII=
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -8840,7 +8894,8 @@ RESq8//IZ5BqQqFFfQAAAABJRU5ErkJggg==
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span class="math">\[ P(\theta | [h=1, t=1]) = \text{Beta}(3, 3) \]</span></p>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -9192,6 +9247,7 @@ NphMJthstqjlTJSMuOQrEYI1zfb2drz++usAgMOHD8NsNsudtoiIkglr7pTy2tracOjQIbzzzjth
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -9550,7 +9606,9 @@ QABAjgACAHIEEACQI4AAgBwBBADkCCAAIEcAAQA5DxZ/pGpAF4MOAAAAAElFTkSuQmCC
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span class="math">\[ P(\theta | [h=20, t=20]) = \text{Beta}(22, 22) \]</span></p>
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="bayes-formula">Bayes Formula</h1>
 <p><span class="math">\[P(\theta| \text{data}) \propto P(\theta) \ast P(\text{data} |\theta)\]</span> <span class="math">\[\text{posterior} \propto \text{prior} \ast \text{likelihood}\]</span></p>
@@ -9559,7 +9617,8 @@ QABAjgACAHIEEACQI4AAgBwBBADkCCAAIEcAAQA5DxZ/pGpAF4MOAAAAAElFTkSuQmCC
 <li>Except in simple cases, <strong>posterior impossible to compute</strong> analytically.</li>
 <li>Blackbox <strong>approximation</strong> algorithm: Markov-Chain Monte Carlo (MCMC) instead draws <strong>samples</strong> from the posterior.</li>
 </ul>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -9999,6 +10058,7 @@ SUVORK5CYII=
 </div>
 
 </div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="approximating-the-posterior-with-mcmc-sampling">Approximating the posterior with MCMC sampling</h2>
 </div>
@@ -10447,7 +10507,9 @@ YII=
 </div>
 </div>
 
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="pymc3">PyMC3</h1>
 <ul>
@@ -10457,14 +10519,17 @@ YII=
 <li>Fast: Just-in-time compiled by Theano.</li>
 <li><strong>Extensible</strong>: easily incorporates custom MCMC algorithms and unusual probability distributions.</li>
 </ul>
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="linear-models">Linear Models</h1>
 <ul>
 <li>Assumes a linear relationship between two variables.</li>
 <li>E.g. stock price between Gold and Gold Miners.</li>
 </ul>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -10488,6 +10553,8 @@ In&nbsp;[15]:
 </div>
 
 </div>
+    </div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -11059,6 +11126,8 @@ iEoWQ5CIiEoWQ5CIiEoWQ5CIiEoWQ5CIiEoWQ5CIiErW/wX0cELVi/57hgAAAABJRU5ErkJggg==
 </div>
 
 </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -11642,6 +11711,9 @@ IiLSof8L9FMIhVyyPHsAAAAASUVORK5CYII=
 </div>
 
 </div>
+    </div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="linear-regression">Linear Regression</h1>
 <p><span class="math">\[ y_i = \alpha + \beta \ast x_i  + \epsilon \]</span></p>
@@ -11650,7 +11722,7 @@ IiLSof8L9FMIhVyyPHsAAAAASUVORK5CYII=
 <p><span class="math">\[ y_i \sim \mathcal{N}(\alpha + \beta \ast x_i, \sigma^2) \]</span></p>
 <h3 id="priors">Priors</h3>
 <p><span class="math">\[ \alpha \sim \mathcal{N}(0, 20^2) \]</span> <span class="math">\[ \beta \sim \mathcal{N}(0, 20^2) \]</span> <span class="math">\[ \sigma \sim \mathcal{U}(0, 20) \]</span></p>
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="constructing-model-in-pymc3">Constructing model in PyMC3</h2>
 </div>
@@ -11694,7 +11766,7 @@ In&nbsp;[19]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="covenience-function-glm">Covenience function glm()</h1>
 </div>
@@ -11715,7 +11787,7 @@ In&nbsp;[]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="posterior">Posterior</h1>
 </div>
@@ -12687,7 +12759,8 @@ IOQgRIETCAQCgZCD/H+eJ8JVQbbn9AAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -13745,6 +13818,7 @@ GgAAgAkR0gAAAEyIkAYAAGBChDQAAAATIqQBAACY0P8HNZHxoashe+EAAAAASUVORK5CYII=
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -14839,10 +14913,12 @@ RU5ErkJggg==
 </div>
 </div>
 
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="robust-regression">Robust Regression</h1>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -15353,7 +15429,7 @@ QgghypaEoBBCiLIlISiEEKJsSQgKIYQoW/8fDaCmxdmzd9gAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -15368,7 +15444,8 @@ In&nbsp;[24]:
 </div>
 </div>
 
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -16267,6 +16344,7 @@ j4hoUTFJIyIiIjIQ70kjIiIiMhCTNCIiIiIDMUkjIiIiMhCTNCIiIiIDMUkjIiIiMhCTNCIiIiID
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -17186,7 +17264,8 @@ ABIIaAAASCCgAQAggYAGAIAEAhoAABL8PxBP/oohGFC7AAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -17648,6 +17727,7 @@ AElFTkSuQmCC
 </div>
 
 </div>
+    </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="fit-strongly-biased-by-outliers">Fit strongly biased by outliers</h1>
 <ul>
@@ -17655,7 +17735,7 @@ AElFTkSuQmCC
 <li>-&gt; sensitive to outliers.</li>
 <li>Instead, use Student T distribution with heavier tails.</li>
 </ul>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -18119,7 +18199,7 @@ gg==
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -18136,7 +18216,8 @@ In&nbsp;[27]:
 </div>
 </div>
 
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -18880,6 +18961,7 @@ ACzo/wOh4FT2cS9WxgAAAABJRU5ErkJggg==
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -19658,7 +19740,9 @@ NAAAAGDD/weAxMcpsIXs5gAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="real-world-example-algorithmic-trading">Real-world example: Algorithmic Trading</h1>
 <ul>
@@ -19666,7 +19750,7 @@ NAAAAGDD/weAxMcpsIXs5gAAAABJRU5ErkJggg==
 <li>For this to work, stocks must be correlated (cointegrated).</li>
 <li>One common example is the price of gold (GLD) and the price of gold mining operations (GDX).</li>
 </ul>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -20205,7 +20289,8 @@ RQAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -21234,6 +21319,7 @@ iIiIqOn9Hxb8v1OkKr0JAAAAAElFTkSuQmCC
 </div>
 
 </div>
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -22269,7 +22355,7 @@ EekwQCQiIiIiHQaIRERERKTz/8gLDuR7bQImAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="naive-model-assumes-constant-linear-regression.">Naive model assumes constant linear regression.</h1>
 </div>
@@ -22288,11 +22374,12 @@ In&nbsp;[31]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Hm...-kinda-unsatisfying...">Hm... kinda unsatisfying...<a class="anchor-link" href="#Hm...-kinda-unsatisfying...">&#182;</a></h2>
 </div>
-
+<div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -23569,6 +23656,7 @@ LzBgAAAAAElFTkSuQmCC
 </div>
 
 </div>
+    </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -24837,7 +24925,8 @@ RAAAABgIEAEAAGD4P9Q8ZIZZcdfsAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div>
+</div><div class="fragment">
+    
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Clearly the regression between GDX and GLD changes over time.</li>
@@ -24846,6 +24935,7 @@ RAAAABgIEAEAAGD4P9Q8ZIZZcdfsAAAAAElFTkSuQmCC
 <li>YES!</li>
 </ul>
 </div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="improved-model">Improved model</h1>
 <ul>
@@ -24854,7 +24944,8 @@ RAAAABgIEAEAAGD4P9Q8ZIZZcdfsAAAAAElFTkSuQmCC
 <li>This allows the coefficients to track the regression as it changes over time.</li>
 </ul>
 <p><span class="math">\[ \alpha_t \sim \mathcal{N}(\alpha_{t-1}, \sigma_\alpha^2) \]</span> <span class="math">\[ \beta_t \sim \mathcal{N}(\beta_{t-1}, \sigma_\beta^2) \]</span></p>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -24869,6 +24960,7 @@ In&nbsp;[]:
 </div>
 
 </div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="textpriors-for-sigma_alphatext-and-sigma_beta"><span class="math">\[\text{Priors for }\sigma_{\alpha}\text{ and }\sigma_{\beta}\]</span></h2>
 </div>
@@ -24896,7 +24988,7 @@ In&nbsp;[59]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="define-regression-coefficients-to-follow-a-random-walk.">Define regression coefficients to follow a random walk.</h2>
 </div>
@@ -24924,7 +25016,7 @@ In&nbsp;[]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="define-regression-and-likelihood">Define regression and likelihood</h2>
 </div>
@@ -24949,7 +25041,7 @@ In&nbsp;[]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="inference">Inference!</h1>
 </div>
@@ -24972,10 +25064,11 @@ In&nbsp;[34]:
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="intercept-changes-over-time."><strong>intercept</strong> changes over time.</h1>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -26598,6 +26691,8 @@ ICIiosAYUBAREVFgDCiIiIgoMAYUREREFBgDCiIiIgrs/wEZZ6tMsXunsgAAAABJRU5ErkJggg==
 </div>
 
 </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -28233,9 +28328,11 @@ dR0GQERERNR1/j99kay9iL4LVgAAAABJRU5ErkJggg==
 </div>
 
 </div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="slope-changes-over-time."><strong>Slope</strong> changes over time.</h1>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -29561,6 +29658,7 @@ n2cR8356AAAAAElFTkSuQmCC
 </div>
 
 </div>
+    </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -30894,10 +30992,11 @@ EkIIIcSBIwGQEEIIIQ4cCYCEEEIIceBIACSEEEKIA0cCICGEEEIcOBIACSGEEOLAkQBICCGEEAfO
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="regression-slowly-adapts-to-best-fit-current-data">Regression slowly adapts to best fit current data</h1>
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -33082,6 +33181,7 @@ QERERDUxYCAiIqKaGDAQERFRTQwYiIiIqKb/B5W84b3xxfSRAAAAAElFTkSuQmCC
 </div>
 
 </div>
+    </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -35263,7 +35363,7 @@ xZLNAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="what-have-we-done-here">What have we done here?</h1>
 <ul>
@@ -35271,7 +35371,9 @@ xZLNAAAAAElFTkSuQmCC
 <li>Construct custom probabilistic model.</li>
 <li>Estimation using blackbox inference.</li>
 </ul>
-</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="conclusions">Conclusions</h1>
 <ul>
@@ -35300,6 +35402,87 @@ xZLNAAAAAElFTkSuQmCC
 <li><a href="https://rawgithub.com/twiecki/pymc3_talk/master/bayesian_pymc3.ipynb">IPython Notebook underlying this talk</a></li>
 <li>Twitter: <a href="https://twitter.com/twiecki">@twiecki</a></li>
 </ul>
+</div></section>
+    </section>
 </div>
+</div>
+
+<!--
+Uncomment the following block and the addthis_widget.js (see below inside dependencies)
+to get enable social buttons.
+-->
+
+<!--
+<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:20px;top:20px;">
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_linkedin"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_more"></a>
+</div>
+-->
+
+<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/head.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/js/reveal.js"></script>
+
+<script>
+
+// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+// { src: 'http://s7.addthis.com/js/300/addthis_widget.js', async: true},
+]
+});
+</script>
+
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script>
+<!-- End of mathjax configuration -->
+
+<script>
+//  We wait for the onload function to load MathJax after the page is completely loaded.
+//  MathJax is loaded 1 unit of time after the page is ready.
+//  This hack prevent problems when you load multiple js files (i.e. social button from addthis).
+//
+window.onload = function () {
+  setTimeout(function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  },1)
+}
+</script>
+
+<script>
+Reveal.addEventListener( 'slidechanged', function( event ) {
+MathJax.Hub.Rerender(event.currentSlide);
+});
+</script>
+
 </body>
+
 </html>
