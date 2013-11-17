@@ -15,10 +15,11 @@ Presentations
 
 These are IPython Notebook slides of a talk I presented at:
 * [Data Mining Meet-up](http://www.meetup.com/Boston-Data-Mining/events/144148692/) in Boston on Oct 15 2013 
-* [PyData conference NYC](http://pydata.org/nyc2013/abstracts/#91) Nov 9 2013 
+* [PyData conference NYC](https://vimeo.com/79518830) on Nov 9 2013
 
 Links
 -----
 
-* The reveal slide show can be found [here](https://rawgithub.com/twiecki/pymc3_talk/master/bayesian_pymc3.slides.html).
-* The PyMC repo is located [here](https://github.com/pymc-devs/pymc).
+* [Video of the talk at PyData](https://vimeo.com/79518830)
+* [The reveal slide show](https://rawgithub.com/twiecki/pymc3_talk/master/bayesian_pymc3.slides.html)
+* [PyMC repo](https://github.com/pymc-devs/pymc)
