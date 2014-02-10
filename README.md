@@ -30,7 +30,7 @@ Dependencies
 Depending on what you already installed, you may need to take the
 following steps:
 
-1. Install MacTex from
+1. On OS X, you may need to install MacTex from
    http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
    
 2. pip install brewer2mpl
