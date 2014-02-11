@@ -23,3 +23,30 @@ Links
 * [Video of the talk at PyData](https://vimeo.com/79518830)
 * [The reveal slide show](https://rawgithub.com/twiecki/pymc3_talk/master/bayesian_pymc3.slides.html)
 * [PyMC repo](https://github.com/pymc-devs/pymc)
+
+Dependencies
+------------
+
+Depending on what you already installed, you may need to take the
+following steps:
+
+1. On OS X, you may need to install MacTex from
+   http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
+   
+2. pip install brewer2mpl
+   brew install git
+   git clone https://github.com/olgabot/prettyplotlib.git
+   cd prettyplotlib/
+   python setup.py install
+
+3. pip install git+https://github.com/pymc-devs/pymc
+
+   [Currently](https://github.com/pymc-devs/pymc/issues/483) needs
+   correction for "except exceptions.KeyError" in
+   ~/Library/Enthought/Canopy_64bit/User/lib/python2.7/site-packages/pymc/plots.py
+
+4. pip install patsy
+   pip install statsmodels
+
+5. pip install zipline
+
