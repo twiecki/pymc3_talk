@@ -35,18 +35,11 @@ following steps:
    
 2. pip install brewer2mpl
    brew install git
-   git clone https://github.com/olgabot/prettyplotlib.git
-   cd prettyplotlib/
-   python setup.py install
+   pip install git+https://github.com/olgabot/prettyplotlib.git
 
 3. pip install git+https://github.com/pymc-devs/pymc
-
-   [Currently](https://github.com/pymc-devs/pymc/issues/483) needs
-   correction for "except exceptions.KeyError" in
-   ~/Library/Enthought/Canopy_64bit/User/lib/python2.7/site-packages/pymc/plots.py
 
 4. pip install patsy
    pip install statsmodels
 
 5. pip install zipline
-
