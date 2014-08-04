@@ -10,19 +10,22 @@ PyMC3 is a new Python module that features next generation sampling algorithms a
 
 In this talk I will provide an intuitive introduction to Bayesian statistics and how probabilistic models can be specified and estimated using PyMC3.
 
-Presentations
--------------
-
-These are IPython Notebook slides of a talk I presented at:
-* [Data Mining Meet-up](http://www.meetup.com/Boston-Data-Mining/events/144148692/) in Boston on Oct 15 2013 
-* [PyData conference NYC](https://vimeo.com/79518830) on Nov 9 2013
-
 Links
 -----
 
+* [Video of the talk at EuroPython](https://www.youtube.com/watch?v=WESld11iNcQ)
+* [The reveal slide show EuroPython version](http://twiecki.github.io/bayesian_pymc3_europy_ab.slides.html#/)
 * [Video of the talk at PyData](https://vimeo.com/79518830)
-* [The reveal slide show](https://rawgithub.com/twiecki/pymc3_talk/master/bayesian_pymc3.slides.html)
+* [The reveal slide show PyData version](https://rawgithub.com/twiecki/pymc3_talk/master/bayesian_pymc3.slides.html)
 * [PyMC repo](https://github.com/pymc-devs/pymc)
+
+Presentations
+-------------
+
+There are two different talks on the same topic (EuroPython and PyData):
+* [EuroPython 2014 conference Berlin](https://ep2014.europython.eu/en/schedule/sessions/80/) on Jul 24 2014 (different material)
+* [PyData conference NYC](https://vimeo.com/79518830) on Nov 9 2013
+* [Data Mining Meet-up](http://www.meetup.com/Boston-Data-Mining/events/144148692/) in Boston on Oct 15 2013 
 
 Dependencies
 ------------
